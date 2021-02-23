@@ -1,0 +1,203 @@
+
+.presentation {
+    padding: 1rem 24rem;
+    background-color: $secondarycolor;
+    color: $primarycolor;
+    font-size: 2rem;
+    font-family: "Source Code Pro", monospace;
+    height: auto;
+    .line {
+        position: relative;
+        padding: 1rem 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.75);
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .anim-typewriter {
+        color: $tertiarycolor;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 850ms steps(44) infinite normal;
+    }
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 30rem;
+        }
+    }
+    @keyframes blinkTextCursor {
+        from {
+            border-right-color: $primarycolor;
+        }
+        to {
+            border-right-color: transparent;
+        }
+    }
+}
+
+.poster-characters {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $secondarycolor;
+    justify-content: center;
+    padding: 2rem 15rem 0 15rem;
+    .character {
+        margin: 2rem;
+        margin-top: 0;
+        position: relative;
+
+        .nameCharacter {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin: 0;
+            bottom: 0;
+            left: 1rem;
+            z-index: 1;
+            height: 8rem;
+
+            a {
+                opacity: 0;
+                text-decoration: none;
+                color: inherit;
+                align-self: flex-end;
+                height: 8rem;
+                width: 20rem;
+                margin-top: 4rem;
+                font-size: 2.2rem;
+                
+            }
+            a:hover {
+                opacity: 1;
+                
+                background: 50% 100% / 50% 50% no-repeat
+                    radial-gradient(ellipse at bottom, $primarycolor, transparent, transparent);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-size: 1.4rem;
+                font-family: "Source Code Pro", monospace;
+                font-weight: bold;
+                animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+
+                @keyframes reveal {
+                    80% {
+                        letter-spacing: 3px;
+                    }
+                    100% {
+                        background-size: 300% 300%;
+                    }
+                }
+                @keyframes glow {
+                    40% {
+                        text-shadow: 0 0 8px $primarycolor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .presentation {
+        padding: 1rem;
+        font-size: 1.4rem;
+        text-align: center;
+        .anim-typewriter {
+            padding: 0;
+            @keyframes typewriter{
+                from{width: 0;}
+                to{width: 10rem;}
+              }
+        }
+    }
+    .poster-characters {
+        padding: 2rem 0 0 0;
+
+        .character {
+            margin-bottom: 0;
+            img {
+                width: 30rem;
+                margin: 1rem 0;
+            }
+            .nameCharacter {
+                bottom: 2rem;
+                a {
+                    opacity: 1;
+                   width: 25rem;
+                    background: 50% 100% / 50% 50% no-repeat
+                        radial-gradient(ellipse at bottom, $primarycolor, transparent, transparent);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 2rem;
+                    font-family: "Source Code Pro", monospace;
+                    animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+
+                    @keyframes reveal {
+                        80% {
+                            letter-spacing: 3px;
+                        }
+                        100% {
+                            background-size: 300% 300%;
+                        }
+                    }
+                    @keyframes glow {
+                        40% {
+                            text-shadow: 0 0 8px $primarycolor;
+                        }
+                    }
+                }
+
+                a:hover {
+                    // display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+    .presentation {
+        padding: 3rem;
+        
+    }
+    .poster-characters {
+        padding: 4rem 0 0 0;
+
+        .character {
+            .nameCharacter {
+                a {
+                    opacity: 1;
+
+                    background: 50% 100% / 50% 50% no-repeat
+                        radial-gradient(ellipse at bottom, $primarycolor, transparent, transparent);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    font-family: "Source Code Pro", monospace;
+                    animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+
+                    @keyframes reveal {
+                        80% {
+                            letter-spacing: 3px;
+                        }
+                        100% {
+                            background-size: 300% 300%;
+                        }
+                    }
+                    @keyframes glow {
+                        40% {
+                            text-shadow: 0 0 8px $primarycolor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

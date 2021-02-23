@@ -1,0 +1,610 @@
+html {
+  font-size: 62.5%;
+}
+html body {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #140C0F;
+  padding: 2rem 24rem 0 24rem;
+}
+header .titleImage {
+  padding: 1rem;
+}
+header .formInput {
+  align-self: center;
+}
+header .formInput input {
+  width: 25rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  font-family: "Source Code Pro", monospace;
+  background-color: #FBEE09;
+  padding: 0.2rem;
+  text-align: center;
+  border: solid 1px #60dafb;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .titleImage img {
+    width: 100%;
+  }
+  header .formInput input {
+    width: 20rem;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 1435px) {
+  header {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+  }
+  header .titleImage {
+    padding: 2rem;
+  }
+  header .formInput input {
+    width: 30rem;
+    margin-right: 0;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: #FBEE09;
+  }
+}
+.container {
+  background-color: #FBEE09;
+}
+.container .mainContainer {
+  background-color: #FBEE09;
+  display: flex;
+  padding: 4rem 28rem 0 28rem;
+  justify-content: space-between;
+}
+.container .mainContainer .leftContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14rem 8rem 0 8rem;
+}
+.container .mainContainer .leftContainer img {
+  width: 40rem;
+}
+.container .mainContainer .rightContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem;
+  font-family: "Source Code Pro", monospace;
+}
+.container .mainContainer .rightContainer h1 {
+  margin: 0;
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 9rem;
+  font-weight: lighter;
+  text-align: center;
+}
+.container .mainContainer .rightContainer .idInfo {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+.container .mainContainer .rightContainer .idInfo span {
+  font-weight: bold;
+}
+.container .mainContainer .rightContainer .description {
+  padding: 2rem;
+}
+.container .mainContainer .rightContainer .description p {
+  margin: 0;
+  text-align: justify;
+}
+
+@media screen and (min-width: 751px) and (max-width: 1300px) {
+  .container {
+    padding: 0 8rem;
+  }
+  .container .mainContainer {
+    display: flex;
+    padding: 0 0 4rem 0;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .container .mainContainer .leftContainer {
+    padding-top: 4rem;
+  }
+  .container .mainContainer .leftContainer img {
+    width: 30rem;
+  }
+  .container .mainContainer .rightContainer {
+    padding: 0;
+  }
+  .container .mainContainer .rightContainer h1 {
+    padding: 2rem;
+    font-size: 6rem;
+  }
+  .container .mainContainer .rightContainer .description {
+    padding: 0;
+  }
+  .container .mainContainer .rightContainer .description p {
+    padding: 4rem;
+    margin: 0;
+    text-align: justify;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1301px) and (max-width: 1700px) {
+  .mainContainer {
+    padding: 0 0 4rem 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .container .mainContainer {
+    display: flex;
+    padding: 0 0 4rem 0;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .container .mainContainer .leftContainer {
+    padding-top: 4rem;
+    width: 20rem;
+  }
+  .container .mainContainer .leftContainer img {
+    width: 20rem;
+  }
+  .container .mainContainer .rightContainer {
+    padding: 0;
+  }
+  .container .mainContainer .rightContainer h1 {
+    padding: 2rem;
+    font-size: 5rem;
+  }
+  .container .mainContainer .rightContainer .description {
+    padding: 0;
+    width: auto;
+  }
+  .container .mainContainer .rightContainer .description p {
+    margin: 0;
+    text-align: justify;
+    width: 35rem;
+  }
+}
+.presentation {
+  padding: 1rem 24rem;
+  background-color: #140C0F;
+  color: #FBEE09;
+  font-size: 2rem;
+  font-family: "Source Code Pro", monospace;
+  height: auto;
+}
+.presentation .line {
+  position: relative;
+  padding: 1rem 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.presentation .anim-typewriter {
+  color: #60dafb;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 850ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30rem;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: #FBEE09;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.poster-characters {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #140C0F;
+  justify-content: center;
+  padding: 2rem 15rem 0 15rem;
+}
+.poster-characters .character {
+  margin: 2rem;
+  margin-top: 0;
+  position: relative;
+}
+.poster-characters .character .nameCharacter {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 1rem;
+  z-index: 1;
+  height: 8rem;
+}
+.poster-characters .character .nameCharacter a {
+  opacity: 0;
+  text-decoration: none;
+  color: inherit;
+  align-self: flex-end;
+  height: 8rem;
+  width: 20rem;
+  margin-top: 4rem;
+  font-size: 2.2rem;
+}
+.poster-characters .character .nameCharacter a:hover {
+  opacity: 1;
+  background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #FBEE09, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.4rem;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+  animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+@keyframes reveal {
+  80% {
+    letter-spacing: 3px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #FBEE09;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .presentation {
+    padding: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .presentation .anim-typewriter {
+    padding: 0;
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 10rem;
+    }
+  }
+
+  .poster-characters {
+    padding: 2rem 0 0 0;
+  }
+  .poster-characters .character {
+    margin-bottom: 0;
+  }
+  .poster-characters .character img {
+    width: 30rem;
+    margin: 1rem 0;
+  }
+  .poster-characters .character .nameCharacter {
+    bottom: 2rem;
+  }
+  .poster-characters .character .nameCharacter a {
+    opacity: 1;
+    width: 25rem;
+    background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #FBEE09, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    font-family: "Source Code Pro", monospace;
+    animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+  }
+  @keyframes reveal {
+    80% {
+      letter-spacing: 3px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #FBEE09;
+    }
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+  .presentation {
+    padding: 3rem;
+  }
+
+  .poster-characters {
+    padding: 4rem 0 0 0;
+  }
+  .poster-characters .character .nameCharacter a {
+    opacity: 1;
+    background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #FBEE09, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: "Source Code Pro", monospace;
+    animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+  }
+  @keyframes reveal {
+    80% {
+      letter-spacing: 3px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #FBEE09;
+    }
+  }
+}
+main {
+  background-color: #140C0F;
+  height: 80rem;
+}
+main .search-container {
+  font-family: "Source Code Pro";
+  background-color: #140C0F;
+  padding: 4rem 28rem;
+}
+main .search-container .line {
+  color: #FBEE09;
+  position: relative;
+  padding: 1rem 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+main .search-container .anim-typewriter {
+  color: #60dafb;
+  font-family: "Source Code Pro", monospace;
+  font-size: 2rem;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 850ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35rem;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: #60dafb;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+main .search-container .items .item {
+  background-color: #FBEE09;
+  display: flex;
+  margin: 2rem 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main .search-container .items .item .personnage-details {
+  padding: 0 4rem;
+}
+main .search-container .items .item .personnage-details h3 a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Libre Barcode 128 Text";
+  font-size: 6rem;
+  font-weight: lighter;
+}
+main .search-container .items .item .personnage-details p {
+  font-style: italic;
+}
+main .search-container .items .item .personnage-details ul {
+  padding: 0;
+}
+main .search-container .items .item .personnage-details ul li {
+  list-style-type: none;
+}
+main .search-container .pagination {
+  display: flex;
+}
+main .search-container .pagination li {
+  list-style-type: none;
+}
+main .search-container .pagination li a {
+  text-decoration: none;
+  color: #60dafb;
+  margin: 0 1rem;
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1700px) {
+  main .search-container {
+    padding: 2rem 10rem;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 1300px) {
+  main .search-container {
+    padding: 2rem;
+  }
+  main .search-container .anim-typewriter {
+    margin-left: 1rem;
+  }
+  main .search-container .items {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  main .search-container {
+    padding: 2rem;
+  }
+  main .search-container .anim-typewriter {
+    font-size: 1.8rem;
+    width: fit-content;
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 35rem;
+    }
+  }
+  main .search-container .items .item {
+    padding: 1rem;
+    text-align: center;
+    flex-direction: column;
+  }
+  main .search-container .items .item .personnage-details p {
+    text-align: start;
+  }
+}
+footer {
+  background-color: #140C0F;
+  padding: 2rem 25rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer p {
+  color: #FBEE09;
+  margin: 0;
+  font-family: "Source Code Pro";
+  font-size: 1.4rem;
+}
+footer .copyR {
+  color: #DB0D15;
+}
+footer .copyR span {
+  color: #FBEE09;
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+  footer {
+    padding: 2rem 5rem;
+  }
+}
+.footerCharacter {
+  background-color: #FBEE09;
+  padding: 0 28rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footerCharacter a {
+  font-family: "Blender Pro", monospace;
+  align-self: flex-start;
+  text-decoration: none;
+  color: inherit;
+  font-size: 8rem;
+  margin-top: 26rem;
+  animation-name: pulsation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes pulsation {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.footerCharacter .logoAffi {
+  justify-self: center;
+  align-self: flex-end;
+}
+.footerCharacter .logoAffi .affi_Logo {
+  margin-bottom: 0;
+}
+.footerCharacter .logoAffi p {
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  color: #140C0F;
+}
+.footerCharacter .location {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footerCharacter .location img {
+  width: 30rem;
+}
+.footerCharacter .location p {
+  font-family: "Source Code Pro", monospace;
+  align-self: center;
+  color: #140C0F;
+}
+
+@media screen and (min-width: 751px) and (max-width: 1300px) {
+  .container .footerCharacter {
+    padding: 0 4rem;
+  }
+}
+@media screen and (min-width: 1301px) and (max-width: 1700px) {
+  .footerCharacter {
+    padding: 5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footerCharacter {
+    padding: 2rem;
+    flex-direction: column-reverse;
+  }
+  .footerCharacter a {
+    margin-top: 0;
+  }
+  .footerCharacter .location {
+    align-items: center;
+  }
+  .footerCharacter .location img {
+    width: 20rem;
+  }
+  .footerCharacter .logoAffi {
+    margin: 0;
+    align-self: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

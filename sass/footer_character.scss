@@ -1,0 +1,93 @@
+.footerCharacter {
+    background-color: $primarycolor;
+    padding: 0 28rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    a {
+        font-family: "Blender Pro", monospace;
+        align-self: flex-start;
+        text-decoration: none;
+        color: inherit;
+        font-size: 8rem;
+        margin-top: 26rem;
+        animation-name: pulsation;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+        @keyframes pulsation {
+            0% {  transform: scale(1.2);
+           }
+            50% { transform: scale(1); }
+          
+            100% { transform: scale(1.2); }
+          }
+          
+    }
+    .logoAffi {
+        justify-self: center;
+        align-self: flex-end;
+        
+        .affi_Logo {
+            margin-bottom: 0;
+        }
+
+        p{
+            font-family: "Source Code Pro", monospace;
+            text-align: center;
+            color: $secondarycolor;  
+        }
+    }
+
+    .location {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
+        img {
+            width: 30rem;
+        }
+        p {
+            font-family: "Source Code Pro", monospace;
+            align-self: center;
+            color: $secondarycolor;
+        }
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1300px) {
+    .container {
+        .footerCharacter {
+            padding: 0 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1700px) {
+    .footerCharacter {
+        padding: 5rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .footerCharacter {
+        padding: 2rem;
+        flex-direction: column-reverse;
+        a {
+            margin-top: 0;
+        }
+        
+        .location {
+            align-items: center;
+            img {
+                width: 20rem;
+            }
+        }
+
+        .logoAffi {
+            margin: 0;
+            align-self: center;
+        }
+    }
+}

@@ -1,0 +1,138 @@
+.container {
+    background-color: $primarycolor;
+
+    .mainContainer {
+        background-color: $primarycolor;
+        display: flex;
+        padding: 4rem 28rem 0 28rem;
+        justify-content: space-between;
+
+        .leftContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 14rem 8rem 0 8rem;
+            img {
+                width: 40rem;
+            }
+        }
+
+        .rightContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5rem;
+            font-family: "Source Code Pro", monospace;
+
+            h1 {
+                margin: 0;
+                font-family: "Libre Barcode 128 Text", cursive;
+                font-size: 9rem;
+                font-weight: lighter;
+                text-align: center;
+            }
+
+            .idInfo {
+                padding: 2rem 0;
+                display: flex;
+                justify-content: space-around;
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            .description {
+                padding: 2rem;
+                p {
+                    margin: 0;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1300px) {
+    .container {
+        padding: 0 8rem;
+
+        .mainContainer {
+            display: flex;
+            padding: 0 0 4rem 0;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+
+            .leftContainer {
+                padding-top: 4rem;
+
+                img {
+                    width: 30rem;
+                }
+            }
+
+            .rightContainer {
+                padding: 0;
+
+                h1 {
+                    padding: 2rem;
+                    font-size: 6rem;
+                }
+                .description {
+                    padding: 0;
+                    
+                    p {
+                        padding: 4rem;
+                        margin: 0;
+                        text-align: justify;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1700px) {
+    .mainContainer {
+        padding: 0 0 4rem 0;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        padding: 0 1rem;
+        .mainContainer {
+            display: flex;
+            padding: 0 0 4rem 0;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+
+            .leftContainer {
+                padding-top: 4rem;
+                width: 20rem;
+                img {
+                    width: 20rem;
+                }
+            }
+
+            .rightContainer {
+                padding: 0;
+                h1 {
+                    padding: 2rem;
+                    font-size: 5rem;
+                }
+                .description {
+                    padding: 0;
+                    width: auto;
+                    p {
+                        margin: 0;
+                        text-align: justify;
+                        width: 35rem;
+                    }
+                }
+            }
+        }
+    }
+}
