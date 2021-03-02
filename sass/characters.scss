@@ -1,4 +1,3 @@
-
 .presentation {
     padding: 1rem 24rem;
     background-color: $secondarycolor;
@@ -45,97 +44,39 @@
     justify-content: center;
     padding: 2rem 15rem 0 15rem;
     .character {
+        display: flex;
         margin: 2rem;
         margin-top: 0;
-        position: relative;
+        flex-direction: column;
 
-        .nameCharacter {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            margin: 0;
-            bottom: 0;
-            left: 1rem;
-            z-index: 1;
-            height: 8rem;
-
-            a {
-                opacity: 0;
+        a {
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            p {
+                margin: 0;
+                left: 1rem;
+                position: absolute;
                 text-decoration: none;
                 color: inherit;
                 align-self: flex-end;
-                height: 8rem;
+                bottom: 1.5rem;
                 width: 20rem;
-                margin-top: 4rem;
+                opacity: 0;
                 font-size: 2.2rem;
-                
-            }
-            a:hover {
-                opacity: 1;
-                
-                background: 50% 100% / 50% 50% no-repeat
-                    radial-gradient(ellipse at bottom, $primarycolor, transparent, transparent);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                font-size: 1.4rem;
-                font-family: "Source Code Pro", monospace;
-                font-weight: bold;
-                animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
 
-                @keyframes reveal {
-                    80% {
-                        letter-spacing: 3px;
-                    }
-                    100% {
-                        background-size: 300% 300%;
-                    }
-                }
-                @keyframes glow {
-                    40% {
-                        text-shadow: 0 0 8px $primarycolor;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .presentation {
-        padding: 1rem;
-        font-size: 1.4rem;
-        text-align: center;
-        .anim-typewriter {
-            padding: 0;
-            @keyframes typewriter{
-                from{width: 0;}
-                to{width: 10rem;}
-              }
-        }
-    }
-    .poster-characters {
-        padding: 2rem 0 0 0;
-
-        .character {
-            margin-bottom: 0;
-            img {
-                width: 30rem;
-                margin: 1rem 0;
-            }
-            .nameCharacter {
-                bottom: 2rem;
-                a {
+                &:hover {
                     opacity: 1;
-                   width: 25rem;
+                    z-index: 1;
                     background: 50% 100% / 50% 50% no-repeat
                         radial-gradient(ellipse at bottom, $primarycolor, transparent, transparent);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
-                    font-size: 2rem;
+                    font-size: 1.4rem;
                     font-family: "Source Code Pro", monospace;
-                    animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+                    font-weight: bold;
+                    animation: reveal 1000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
 
                     @keyframes reveal {
                         80% {
@@ -151,9 +92,65 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
 
-                a:hover {
-                    // display: none;
+@media screen and (max-width: 750px) {
+    .presentation {
+        padding: 1rem;
+        font-size: 1.4rem;
+        text-align: center;
+        .anim-typewriter {
+            padding: 0;
+            @keyframes typewriter {
+                from {
+                    width: 0;
+                }
+                to {
+                    width: 10rem;
+                }
+            }
+        }
+    }
+    .poster-characters {
+        padding: 2rem 0 0 0;
+
+        .character {
+            margin-bottom: 0;
+            a {
+                img {
+                    width: 25rem;
+                    margin: 1rem 0;
+                }
+
+                p {
+                    bottom: 3rem;
+                    opacity: 1;
+                    width: 25rem;
+                    background: 50% 100% / 50% 50% no-repeat
+                        radial-gradient(ellipse at bottom, $primarycolor, transparent, transparent);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 2rem;
+                    font-family: "Source Code Pro", monospace;
+                    animation: reveal 1000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+
+                    @keyframes reveal {
+                        80% {
+                            letter-spacing: 3px;
+                        }
+                        100% {
+                            background-size: 300% 300%;
+                        }
+                    }
+                    @keyframes glow {
+                        40% {
+                            text-shadow: 0 0 8px $primarycolor;
+                        }
+                    }
                 }
             }
         }
@@ -163,14 +160,13 @@
 @media screen and (min-width: 751px) and (max-width: 1024px) {
     .presentation {
         padding: 3rem;
-        
     }
     .poster-characters {
         padding: 4rem 0 0 0;
 
         .character {
-            .nameCharacter {
-                a {
+            a {
+                p {
                     opacity: 1;
 
                     background: 50% 100% / 50% 50% no-repeat
@@ -181,7 +177,7 @@
                     font-size: 1.6rem;
                     font-weight: bold;
                     font-family: "Source Code Pro", monospace;
-                    animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+                    animation: reveal 1000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
 
                     @keyframes reveal {
                         80% {

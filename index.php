@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/a082fd3df68a0b54e0d4d794bc38d268?family=Blender+Pro" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/main.css">
 
@@ -34,26 +34,26 @@ $characters = $query->fetchAll();
                 <img src="./img/title_Image.png" alt="">
             </div>
 
-           <div class="formInput">
-                <input class="inputChamp"type="text" placeholder="Saisissez une donnée" id="search">
+            <div class="formInput">
+                <input class="inputChamp" type="text" placeholder="Saisissez une donnée" id="search">
             </div>
         </header>
-<div class="presentation">
-<p class="line anim-typewriter"> &#x201F; Hellooooo Night-City !!! &#x201D; </p>
+        <div class="presentation">
+            <p class="line anim-typewriter"> &#x201F; Hellooooo Night-City !!! &#x201D; </p>
 
-</div>
+        </div>
         <div class="poster-characters">
             <?php
             foreach ($characters as $character) {
 
             ?>
                 <div class="character">
-                    <img src="./img/perso_poster/<?= $character["poster"] ?>.jpg" alt="">
+                    <a href="character.php?id=<?= $character["id"] ?>">
+                        <img src="./img/perso_poster/<?= $character["poster"] ?>.jpg" alt="">
 
-                    <div class="nameCharacter"><a href="character.php?id=<?= $character["id"] ?>">
-                            <?= $character["name"] ?>
-                        </a>
-                    </div>
+
+                        <p><?= $character["name"] ?></p>
+                    </a>
 
                 </div>
             <?php
@@ -64,9 +64,9 @@ $characters = $query->fetchAll();
         <footer>
             <p class="copyR"> <span>&#xA9;</span> Cd Projekt Red </p>
 
-            <p>Fan projekt by Alexandre ROY</p>
+            <p class="IdCreator">Fan projekt by <a href="https://alexandre-roy.web.app/" target="_blank"> Alexandre ROY</a></p>
         </footer>
-<script src="js/main.js"></script>
+        <script src="js/main.js"></script>
     </main>
 </body>
 

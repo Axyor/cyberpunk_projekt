@@ -16,6 +16,14 @@ justify-content: space-between;
             color: $primarycolor;
         }
     }
+    .IdCreator{
+        a{
+            font-weight: bold;
+            color: $tertiarycolor;
+            
+            text-decoration: none;
+        }
+    }
 }
 
 @media screen and (max-width: 750px) {

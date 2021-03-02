@@ -62,20 +62,30 @@ header .formInput input {
     background-color: #FBEE09;
   }
 }
+html,
+body {
+  height: 100%;
+  background-color: #140C0F;
+}
+
 .container {
-  background-color: #FBEE09;
+  background-color: #140C0F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
 }
 .container .mainContainer {
   background-color: #FBEE09;
-  display: flex;
-  padding: 4rem 28rem 0 28rem;
-  justify-content: space-between;
+  border-top-right-radius: 10px;
+  width: 80%;
+  padding: 0;
+  justify-content: space-around;
 }
 .container .mainContainer .leftContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 14rem 8rem 0 8rem;
+  justify-content: center;
+  padding: 4rem 0;
 }
 .container .mainContainer .leftContainer img {
   width: 40rem;
@@ -83,9 +93,9 @@ header .formInput input {
 .container .mainContainer .rightContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 5rem;
+  justify-content: center;
   font-family: "Source Code Pro", monospace;
+  flex-basis: 40%;
 }
 .container .mainContainer .rightContainer h1 {
   margin: 0;
@@ -95,7 +105,7 @@ header .formInput input {
   text-align: center;
 }
 .container .mainContainer .rightContainer .idInfo {
-  padding: 2rem 0;
+  padding: 2rem 28rem;
   display: flex;
   justify-content: space-around;
 }
@@ -103,23 +113,24 @@ header .formInput input {
   font-weight: bold;
 }
 .container .mainContainer .rightContainer .description {
-  padding: 2rem;
+  padding: 4rem 28rem;
 }
 .container .mainContainer .rightContainer .description p {
   margin: 0;
-  text-align: justify;
+  text-align: left;
 }
 
-@media screen and (min-width: 751px) and (max-width: 1300px) {
+@media screen and (min-width: 751px) and (max-width: 1600px) {
   .container {
-    padding: 0 8rem;
+    padding: 4rem 0;
   }
   .container .mainContainer {
     display: flex;
-    padding: 0 0 4rem 0;
+    padding: 0 1rem 4rem 1rem;
     flex-direction: column;
     align-items: center;
     height: auto;
+    width: 80%;
   }
   .container .mainContainer .leftContainer {
     padding-top: 4rem;
@@ -134,31 +145,28 @@ header .formInput input {
     padding: 2rem;
     font-size: 6rem;
   }
-  .container .mainContainer .rightContainer .description {
+  .container .mainContainer .rightContainer .idInfo {
     padding: 0;
   }
-  .container .mainContainer .rightContainer .description p {
-    padding: 4rem;
-    margin: 0;
-    text-align: justify;
-    width: auto;
+  .container .mainContainer .rightContainer .description {
+    padding: 0 4rem;
   }
-}
-@media screen and (min-width: 1301px) and (max-width: 1700px) {
-  .mainContainer {
-    padding: 0 0 4rem 0;
+  .container .mainContainer .rightContainer .description p {
+    margin: 0;
+    text-align: left;
+    width: auto;
   }
 }
 @media screen and (max-width: 750px) {
   .container {
-    padding: 0 1rem;
+    padding: 0;
   }
   .container .mainContainer {
     display: flex;
-    padding: 0 0 4rem 0;
+    padding: 0 1rem 4rem 1rem;
     flex-direction: column;
     align-items: center;
-    height: auto;
+    width: 80%;
   }
   .container .mainContainer .leftContainer {
     padding-top: 4rem;
@@ -174,14 +182,15 @@ header .formInput input {
     padding: 2rem;
     font-size: 5rem;
   }
-  .container .mainContainer .rightContainer .description {
+  .container .mainContainer .rightContainer .idInfo {
     padding: 0;
-    width: auto;
+  }
+  .container .mainContainer .rightContainer .description {
+    padding: 1rem;
   }
   .container .mainContainer .rightContainer .description p {
     margin: 0;
-    text-align: justify;
-    width: 35rem;
+    text-align: left;
   }
 }
 .presentation {
@@ -231,32 +240,31 @@ header .formInput input {
   padding: 2rem 15rem 0 15rem;
 }
 .poster-characters .character {
+  display: flex;
   margin: 2rem;
   margin-top: 0;
+  flex-direction: column;
+}
+.poster-characters .character a {
+  text-decoration: none;
+  color: inherit;
   position: relative;
 }
-.poster-characters .character .nameCharacter {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+.poster-characters .character a p {
   margin: 0;
-  bottom: 0;
   left: 1rem;
-  z-index: 1;
-  height: 8rem;
-}
-.poster-characters .character .nameCharacter a {
-  opacity: 0;
+  position: absolute;
   text-decoration: none;
   color: inherit;
   align-self: flex-end;
-  height: 8rem;
+  bottom: 1.5rem;
   width: 20rem;
-  margin-top: 4rem;
+  opacity: 0;
   font-size: 2.2rem;
 }
-.poster-characters .character .nameCharacter a:hover {
+.poster-characters .character a p:hover {
   opacity: 1;
+  z-index: 1;
   background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #FBEE09, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
@@ -264,7 +272,7 @@ header .formInput input {
   font-size: 1.4rem;
   font-family: "Source Code Pro", monospace;
   font-weight: bold;
-  animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+  animation: reveal 1000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
 }
 @keyframes reveal {
   80% {
@@ -304,14 +312,12 @@ header .formInput input {
   .poster-characters .character {
     margin-bottom: 0;
   }
-  .poster-characters .character img {
-    width: 30rem;
+  .poster-characters .character a img {
+    width: 25rem;
     margin: 1rem 0;
   }
-  .poster-characters .character .nameCharacter {
-    bottom: 2rem;
-  }
-  .poster-characters .character .nameCharacter a {
+  .poster-characters .character a p {
+    bottom: 3rem;
     opacity: 1;
     width: 25rem;
     background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #FBEE09, transparent, transparent);
@@ -320,7 +326,7 @@ header .formInput input {
     color: transparent;
     font-size: 2rem;
     font-family: "Source Code Pro", monospace;
-    animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+    animation: reveal 1000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
   }
   @keyframes reveal {
     80% {
@@ -344,7 +350,7 @@ header .formInput input {
   .poster-characters {
     padding: 4rem 0 0 0;
   }
-  .poster-characters .character .nameCharacter a {
+  .poster-characters .character a p {
     opacity: 1;
     background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #FBEE09, transparent, transparent);
     -webkit-background-clip: text;
@@ -353,7 +359,7 @@ header .formInput input {
     font-size: 1.6rem;
     font-weight: bold;
     font-family: "Source Code Pro", monospace;
-    animation: reveal 3000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
+    animation: reveal 1000ms forwards 200ms, glow 2500ms linear infinite 2000ms;
   }
   @keyframes reveal {
     80% {
@@ -510,6 +516,11 @@ footer .copyR {
 footer .copyR span {
   color: #FBEE09;
 }
+footer .IdCreator a {
+  font-weight: bold;
+  color: #60dafb;
+  text-decoration: none;
+}
 
 @media screen and (max-width: 750px) {
   footer {
@@ -523,10 +534,12 @@ footer .copyR span {
 }
 .footerCharacter {
   background-color: #FBEE09;
-  padding: 0 28rem;
+  padding: 4rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
+  width: 80%;
+  border-bottom-left-radius: 10px;
 }
 .footerCharacter a {
   font-family: "Blender Pro", monospace;
@@ -579,17 +592,17 @@ footer .copyR span {
 
 @media screen and (min-width: 751px) and (max-width: 1300px) {
   .container .footerCharacter {
-    padding: 0 4rem;
+    padding: 0 1rem 4rem 1rem;
   }
 }
 @media screen and (min-width: 1301px) and (max-width: 1700px) {
   .footerCharacter {
-    padding: 5rem;
+    padding: 0 1rem 4rem 1rem;
   }
 }
 @media screen and (max-width: 750px) {
   .footerCharacter {
-    padding: 2rem;
+    padding: 0 1rem 2rem 1rem;
     flex-direction: column-reverse;
   }
   .footerCharacter a {
