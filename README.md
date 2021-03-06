@@ -12,10 +12,10 @@ J’ai créé une base de données en MySQL pour l’associer au rendu de celui-
 
 -> Mise en place d'un système de recherches/personnage et d'un affichage dynamique de cette recherche.
 
------------- Fonction envisagées ------------
+------------ Fonctions envisagées ------------
 
 -> Création d'une page affiliation et localisation en m'aident de la db.
 
--> Rendre dynamique la position des personnages sur une carte en fonction de leurs localisation.
+-> Rendre dynamique la position des personnages sur une carte en fonction de leurs localisations.
 
 -> Appliquer la recherche par rapport aux gangs .
