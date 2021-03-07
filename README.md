@@ -14,7 +14,7 @@ J’ai créé une base de données en MySQL pour l’associer au rendu de celui-
 
 ------------ Fonctions envisagées ------------
 
--> Création d'une page affiliation et localisation en m'aident de la db.
+-> Création d'une page affiliation et localisation en m'aidant de la db.
 
 -> Rendre dynamique la position des personnages sur une carte en fonction de leurs localisations.
 
